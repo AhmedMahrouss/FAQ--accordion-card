@@ -1,0 +1,124 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+--Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--Soft-red: hsl(14, 88%, 65%);
+--Softviolet: hsl(273, 75%, 66%);
+--Softblue: hsl(240, 73%, 65%);
+--Verydark-grayishblue: hsl(237, 12%, 33%);
+--Darkgrayishblue: hsl(240, 6%, 50%);
+--Lightgrayishblue: hsl(240, 5%, 91%);
+}
+body{
+min-width: 100vw;
+min-height: 100vh;
+background:linear-gradient(var(--Softviolet),var(--Softblue));
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+position: relative;
+width: 340px;
+background-color: var(--Lightgrayishblue);
+border-radius: 12px;
+margin-top: 40px;
+}
+.container .img{
+width: 230px;
+position: absolute;
+top: -95px;
+left: 60px;
+}
+.img .shadow{
+position: relative;
+bottom: 75px;
+}
+.img :nth-child(3){
+display: none;
+}
+.img :nth-child(2){
+position: relative;
+bottom: 130px;
+right: 60px;
+}
+.container .img img{
+width: 100%;
+}.content{
+margin-top: 120px;
+}
+.content h1{
+text-align: center;
+}
+.content .question{
+margin-left: 10px;
+}
+.content span{
+position: relative;
+color: var(--Darkgrayishblue);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+line-height: 60px;
+margin-left: 8px;
+}
+.content p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+color: var(--Darkgrayishblue);
+margin-top: -17px;
+}
+.content .question img , i{
+float: right;
+margin-right: 15px;
+margin-top: 25px;
+cursor: pointer;
+}
+.question i{
+display: none;
+}
+.toggle{
+display: none;
+}
+.toggleArrow{
+transform: rotate(180deg);
+}
+.question .toggleAsk{
+color: hsl(238, 29%, 16%);
+font-weight: bold;
+}
+
+@media screen and (min-width:1440px){
+body{
+    overflow: hidden;
+}
+.container{
+    width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+   .img :nth-child(2){
+    display: block;
+    position: relative;
+    bottom: 220px;
+    right: 20px;
+    
+}.container .img{
+    width: 450px;
+    top: 40px;
+    left: -80px;
+}.img .shadow{
+    bottom: 340px;
+}.content{
+    position: relative;
+    right: 100px;
+    width: 360px;
+    bottom: 30px;
+}
+.content i{
+    margin-right: 0;
+    margin-top: 0;
+}
+}
